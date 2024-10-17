@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trio Delicacies - Online Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ffcc66;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+            width: 30%;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h2 {
+            color: #333;
+        }
+        .order-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .order-form h2 {
+            text-align: center;
+            color: #ffcc66;
+        }
+        .order-form label {
+            font-weight: bold;
+        }
+        .order-form input, .order-form select, .order-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .order-form button {
+            background-color: #ffcc66;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Trio Delicacies</h1>
+</header>
+
+<div class="container">
+    <section class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Mochi Bites">
+            <h2>Mochi Bites</h2>
+            <p>Mochi coklat dan toping fla dan oreo</p>
+            <p><strong>Harga: 5.000 </strong></p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Cheese Roll">
+            <h2>Cheese Roll</h2>
+            <p>Cheese Roll dengan toping Susu, Keju, dan Coklat.</p>
+            <p><strong>Harga: 10.000 </strong></p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Roti Bakar">
+            <h2>Roti Bakar</h2>
+            <p>Roti Bakar dengan isi coklat.</p>
+            <p><strong>Harga: 5.000</strong></p>
+        </div>
+    </section>
+
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+        <form action="#" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Select Product:</label>
+            <select id="product" name="product">
+                <option value="Mochi Bites">Mochi Bites - 5.000 </option>
+                <option value="Cheese Roll">Cheese Roll - 10.000</option>
+                <option value="Roti Bakar">Roti Bakar - 5.000</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <button type="submit">Submit Order</button>
+        </form>
+        <form action="send_mail.php" method="POST"> </form>
+
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Trio Delicacies. All Rights Reserved.</p>
+</footer>
+
+
